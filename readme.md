@@ -6,6 +6,6 @@ Currently this toast shows IP address, you can adjust it to do anything...
 
 # Demo:
 
-![demo](https://i.imgur.com/3ucwoh8.gif)
+![demo](demo.gif)
 
 <!-- ![demo](https://i.imgur.com/KeG2IKP.mp4) -->

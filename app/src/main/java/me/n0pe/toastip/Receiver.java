@@ -18,7 +18,9 @@ public class Receiver extends BroadcastReceiver {
 		
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 		String action = intent.getAction();
-		
+		if(action == null) {
+			action = "none";
+		}
 		if(!preferences.getBoolean("enabled", true)) {
 			return;
 		}
@@ -26,6 +28,9 @@ public class Receiver extends BroadcastReceiver {
 			return;
 		}
 		if(action.contains("WIFI") && !preferences.getBoolean("receive_wifi", true)) {
+			return;
+		}
+		if(action.contains("USER") && !preferences.getBoolean("receive_unlock", true)) {
 			return;
 		}
 		if(action.contains("UNLOCK") && !preferences.getBoolean("receive_unlock", true)) {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="me.n0pe.toastip">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+	<application
+		android:name=".App"
+		android:icon="@mipmap/ic_launcher"
+		android:label="ToastIP"
+		android:supportsRtl="true"
+		android:theme="@android:style/Theme.DeviceDefault">
+		<receiver
+			android:name=".Receiver"
+			android:enabled="true"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT"/>
+				<action android:name="android.intent.action.USER_UNLOCKED"/>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.USER_UNLOCKED"/>
+				<action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+				<action android:name="android.intent.action.SCREEN_ON"/>
+			</intent-filter>
+		</receiver>
+
+		<activity
+			android:name=".Settings"
+			android:exported="true"
+			android:theme="@android:style/Theme.DeviceDefault"
+			android:parentActivityName=".Settings"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>

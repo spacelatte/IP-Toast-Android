@@ -1,0 +1,61 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+	<SwitchPreference
+		android:key="enabled"
+		android:title="Enable Receiver"
+		android:summary="Enables or disables everything"
+		android:defaultValue="true"
+		/>
+	<CheckBoxPreference
+		android:key="length"
+		android:title="Toast show length"
+		android:summaryOn="Use longer time to show toast"
+		android:summaryOff="Use shorter time to show toast"
+		/>
+
+	<PreferenceCategory
+		android:title="Shake to Show Settings"
+		>
+		<CheckBoxPreference
+			android:key="shake_enabled"
+			android:title="Shake to show enabled"
+			android:defaultValue="true"
+			/>
+		<ListPreference
+			android:key="shake_sensitivity"
+			android:title="Senstivity of shake"
+			android:defaultValue="13"
+			android:entries="@array/settings_shake_sens_keys"
+			android:entryValues="@array/settings_shake_sens_vals"
+			android:negativeButtonText="@null"
+			android:positiveButtonText="@null"
+			/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="Receiver settings"
+		>
+		<CheckBoxPreference
+			android:key="receive_boot"
+			android:title="Show on boot"
+			android:defaultValue="true"
+			/>
+		<CheckBoxPreference
+			android:key="receive_wifi"
+			android:title="Show on Wifi"
+			android:defaultValue="true"
+			/>
+		<CheckBoxPreference
+			android:key="receive_unlock"
+			android:title="Show on unlock"
+			android:defaultValue="true"
+			/>
+		<CheckBoxPreference
+			android:key="receive_screen"
+			android:title="Show on screen on"
+			android:defaultValue="true"
+			/>
+	</PreferenceCategory>
+
+</PreferenceScreen>

@@ -10,6 +10,7 @@
 		android:name=".App"
 		android:icon="@mipmap/ic_launcher"
 		android:label="ToastIP"
+		android:persistent="true"
 		android:supportsRtl="true"
 		android:theme="@android:style/Theme.DeviceDefault">
 		<receiver

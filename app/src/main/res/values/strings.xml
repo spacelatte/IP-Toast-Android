@@ -1,0 +1,16 @@
+<resources>
+	<string-array name="settings_shake_sens_keys">
+		<item>Tilt</item>
+		<item>Low</item>
+		<item>Med</item>
+		<item>High</item>
+		<item>Kick</item>
+	</string-array>
+	<string-array name="settings_shake_sens_vals">
+		<item>10</item>
+		<item>11</item>
+		<item>13</item>
+		<item>15</item>
+		<item>16</item>
+	</string-array>
+</resources>
